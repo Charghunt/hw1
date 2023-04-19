@@ -167,10 +167,6 @@ CREATE TABLE characters (
   actor_name TEXT
 );
 
-SELECT * FROM actors;
-SELECT * FROM movies;
-SELECT * FROM characters;
-
 
 -- Inserting actual data into tables
 
@@ -227,4 +223,44 @@ VALUES (
     "PG-13"
 );
 
-SELECT * FROM movies;
+
+INSERT INTO actors (
+    actor_name
+)
+
+VALUES 
+    ("Heath Ledger"),
+    ("Aaron Eckhart"),
+   ("Michael Cane"),
+   ("Maggie Gyllenhaal"),
+   ("Christian Bale"),
+   ("Tom Hardy"),
+   ("Joseph Gordon-Levitt"),
+   ("Anne Hathaway"
+);
+
+
+INSERT INTO characters (
+    movie_name,
+    actor_name,
+    role_title
+)
+VALUES 
+    ("Batman Begins", "Christian Bale", "Bruce Wayne"),
+    ("Batman Begins", "Michael Caine", "Alfred"),
+    ("Batman Begins", "Liam Neeson", "Ra's Al Ghul"),
+    ("Batman Begins", "Katie Holmes","Rachel Dawes"),
+    ("Batman Begins", "Gary Oldman", "Commissioner Gordon"),
+    ("The Dark Night", "Christian Bale", "Bruce Wayne"),
+    ("The Dark Night", "Heath Ledger", "Joker"),
+    ("The Dark Night", "Aaron Eckhart", "Harvey Dent"),
+    ("The Dark Night", "Michael Cane", "Alfred"),
+    ("The Dark Night", "Maggie Gyllenhaal", "Rachel Dawes"),
+    ("The Dark Night Rises", "Christian Bale", "Bruce Wayne"),
+    ("The Dark Night Rises", "Gary Oldman", "Commissioner Gordon"),
+    ("The Dark Night Rises", "Tom Hardy", "Bane"),
+    ("The Dark Night Rises", "Joseph Gordon-Levitt", "John Blake"),
+    ("The Dark Night Rises", "Anne Hathaway", "Selina Kyle"
+);
+
+SELECT * FROM characters;
