@@ -137,17 +137,14 @@
 
 -- Drops existing tables, so we start fresh with each
 -- run of this script
-DROP TABLE IF EXISTS studio;
+
+
 DROP TABLE IF EXISTS actors;
 DROP TABLE IF EXISTS movies;
 DROP TABLE IF EXISTS characters;
 
 
 -- Create the rest of the tables
-CREATE TABLE studio (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  studio_name TEXT
-);
 
 CREATE TABLE actors (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -155,42 +152,21 @@ CREATE TABLE actors (
 );
 
 CREATE TABLE movies (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  movie_title TEXT
-  release_year INTEGER
-  release_studio TEXT
-  rating TEXT
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    movie_name TEXT
+    studio_name TEXT
+    release_year TEXT
+    rating TEXT
+
 );
 
 CREATE TABLE characters (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
-  movie_title TEXT
-  role_title INTEGER
+  movie_name TEXT
+  role_title TEXT
   actor_name TEXT
 );
 
--- Inserts actual data into created tables
-
-INSERT INTO studio (
-    studio_name
-)
-
-VALUES (
-    "Warner Bros."
-);
-
-
-
-INSERT INTO actors (
-    actor_name
-)
-
-VALUES 
-    ("Christian Bale"),
-    ("Michael Cane"),
-   ("Liam Neeson"),
-   ("Katie Homes"),
-   ("Gary Oldman"
-);
-
-SELECT * FROM actors;   
+SELECT * FROM actors;
+SELECT * FROM movies;
+SELECT * FROM characters;
