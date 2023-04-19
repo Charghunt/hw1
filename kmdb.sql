@@ -113,19 +113,10 @@
 -- Use hard-coded foreign key IDs when necessary
 -- TODO!
 
--- Prints a header for the movies output
-.print "Movies"
-.print "======"
-.print ""
 
 -- The SQL statement for the movies output
 -- TODO!
 
--- Prints a header for the cast output
-.print ""
-.print "Top Cast"
-.print "========"
-.print ""
 
 
 -- The SQL statement for the cast output
@@ -262,5 +253,20 @@ VALUES
     ("The Dark Night Rises", "Joseph Gordon-Levitt", "John Blake"),
     ("The Dark Night Rises", "Anne Hathaway", "Selina Kyle"
 );
+
+-- Prints a header for the movies output
+.print "Movies"
+.print "======"
+.print ""
+
+SELECT movie_name, release_year, rating, studio_name
+FROM movies
+GROUP BY movie_name;
+
+-- Prints a header for the cast output
+.print ""
+.print "Top Cast"
+.print "========"
+.print ""
 
 SELECT * FROM characters;
