@@ -168,3 +168,29 @@ CREATE TABLE characters (
   role_title INTEGER
   actor_name TEXT
 );
+
+-- Inserts actual data into created tables
+
+INSERT INTO studio (
+    studio_name
+)
+
+VALUES (
+    "Warner Bros."
+);
+
+
+
+INSERT INTO actors (
+    actor_name
+)
+
+VALUES 
+    ("Christian Bale"),
+    ("Michael Cane"),
+   ("Liam Neeson"),
+   ("Katie Homes"),
+   ("Gary Oldman"
+);
+
+SELECT * FROM actors;   
