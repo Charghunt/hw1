@@ -153,20 +153,78 @@ CREATE TABLE actors (
 
 CREATE TABLE movies (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    movie_name TEXT
-    studio_name TEXT
-    release_year TEXT
+    movie_name TEXT,
+    studio_name TEXT,
+    release_year TEXT,
     rating TEXT
 
 );
 
 CREATE TABLE characters (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
-  movie_name TEXT
-  role_title TEXT
+  movie_name TEXT,
+  role_title TEXT,
   actor_name TEXT
 );
 
 SELECT * FROM actors;
 SELECT * FROM movies;
 SELECT * FROM characters;
+
+
+-- Inserting actual data into tables
+
+INSERT INTO actors (
+    actor_name
+)
+
+VALUES 
+    ("Christian Bale"),
+    ("Michael Cane"),
+   ("Liam Neeson"),
+   ("Katie Homes"),
+   ("Gary Oldman"
+);
+
+
+INSERT INTO movies (
+    movie_name,
+    studio_name,
+    release_year,
+    rating
+)
+VALUES (
+    "Batman Begins",
+    "Warner Bros.",
+    "2005",
+    "PG-13"
+);
+
+
+INSERT INTO movies (
+    movie_name,
+    studio_name,
+    release_year,
+    rating
+)
+VALUES (
+    "The Dark Night",
+    "Warner Bros.",
+    "2008",
+    "PG-13"
+);
+
+INSERT INTO movies (
+    movie_name,
+    studio_name,
+    release_year,
+    rating
+)
+VALUES (
+    "The Dark Night Rises",
+    "Warner Bros.",
+    "2012",
+    "PG-13"
+);
+
+SELECT * FROM movies;
