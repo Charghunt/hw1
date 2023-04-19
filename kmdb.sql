@@ -130,3 +130,41 @@
 
 -- The SQL statement for the cast output
 -- TODO!
+
+
+
+
+
+-- Drops existing tables, so we start fresh with each
+-- run of this script
+DROP TABLE IF EXISTS studio;
+DROP TABLE IF EXISTS actors;
+DROP TABLE IF EXISTS movies;
+DROP TABLE IF EXISTS characters;
+
+
+-- Create the rest of the tables
+CREATE TABLE studio (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  studio_name TEXT
+);
+
+CREATE TABLE actors (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  actor_name TEXT
+);
+
+CREATE TABLE movies (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  movie_title TEXT
+  release_year INTEGER
+  release_studio TEXT
+  rating TEXT
+);
+
+CREATE TABLE characters (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  movie_title TEXT
+  role_title INTEGER
+  actor_name TEXT
+);
